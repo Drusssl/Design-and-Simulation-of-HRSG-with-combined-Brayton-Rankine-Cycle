@@ -1,0 +1,202 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{\textbf{Assignment 2}}
+\author{Shivansh Pandey}
+\date{Submission date: 20th Dec 2025}
+
+\usepackage{float}
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+\section{\textbf{Introduction}}
+Thermodynamic cycles can be divided into two general categories: \textit{power cycles}  and \textit{refrigeration cycles}. 
+In this piece of text, we are going to discuss Power Cycles.
+The devices or systems used to produce net power output are often called \textit{engines}, and the thermodynamic cycles on which they operate are called \textit{power cycles}. 
+Power cycles are further divided into Gas cycles and Vapour Cycles depending on the phase of the working fluid. 
+
+Steam is the most common working fluid in Vapour Power cycles because of so many desirable characteristics such as low cost, availability, and high enthalpy of vaporization. Steam power plants are commonly referred to as \textit{coal plants, nuclear plants, or natural gas plants,} depending on the type of fuel used to \textbf{supply heat }to the steam.
+The steam goes through the same basic cycle in all of them. Therefore, all can be analyzed in a similar manner. 
+
+In case of Gas power cycles, working fluid is often considered mainly to be air as fuel is lesser as compared to volume of air heated. These gas-turbine cycles usually are open cycles which means they intake fresh air from ambient conditions and release high pressure and temperature gases while producing net work output. 
+
+These power cycles work on the basic principles of thermodynamics, the first law of conservation of energy and the second law of entropy and irreversibility. By studying the idealized cycles, we can evaluate maximum possible performance, understand the key physical principles that govern energy conservation in real power cycles and identify where the improvements could be made at a minute level. 
+Our further discussion, holds around the region of Brayton and Rankine cycles which are common ideal power cycles. 
+
+Rankine cycle is the basic vapour powered cycle in which water is used most commonly as working fluid. Heat is added to water in a boiler which produces high pressure steam, which expands to produce work in turbine. 
+
+Brayton cycle was first used by George Brayton to use in his reciprocating oil-burning engine. Today, it is used for gas turbines only where both the compression and expansion processes take place in rotating machinery. Fresh air at ambient conditions is drawn into the compressor, where its temperature and pressure are raised. The high-pressure air proceeds into the combustion chamber, where the fuel is burned at constant pressure. The resulting high-temperature gases then enter the turbine, where they expand to the atmospheric pressure while producing power. The exhaust gases leaving the turbine are thrown out, causing the cycle to be classified as an open cycle. 
+
+\textbf{
+\section{{Rankine Cycle}}
+}
+The ideal Rankine cycle does not involve any internal irreversibilities and consists of the following four processes:
+
+(1-2) Isentropic compression in a pump
+
+(2-3) Constant-pressure heat addition in a boiler
+
+(3-4) Isentropic expansion in a turbine
+
+(4-1) Constant-pressure heat rejection in a condenser
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Rankine_Ts.png}
+        \caption{T-s diagram of a simple Ideal Rankine Cycle 
+        (Hand drawn in ms paint)}
+\end{figure}
+Starting with \textbf{state 1}, water enters the pump as a saturated liquid which is compressed isentropically to the pressure of pump. Temperature of water increases slightly due to decrease in specific volume of water. 
+
+At \textbf{state 2}, water is now in the boiler and heat is provided by some external heat source at a constant pressure to convert it into superheated vapour at state~3. The boiler is basically a large heat exchanger where the heat originating from combustion gases, nuclear reactors, or by any other sources. 
+
+At \textbf{state 3}, superheated vapour enters turbine, where it expands isen tropically and produces work by rotating the shaft connected to an electric generator. The pressure and temperature drops during this process to the values at state~4. 
+
+At \textbf{state 4}, steam enters into the condenser, where the water is usually in a state of saturated liquid-vapour mixture at a high quality. Steam is condensed at constant pressure in the condenser, which is basically a large heat exchanger, by rejecting heat to a cooling medium such as a lake, a river, or the atmosphere. 
+
+\raggedright
+\textit{{Now, with the energy balances to derive an expression for efficiency.}}
+
+\vspace{1em}
+Energy balance for pump, 
+since, pump is isentropic, q = 0 and 
+
+\centering
+\(w_{in}\) = \(h_2 - h_1\) 
+
+\textit{or} 
+
+\(w_{in}\) = v(\(P_2 - P_1\))
+
+\textit{here}, we can say estimate 
+\( h_1 = h_{f@P_1} \) and v = \(v_1\) = \(v_{f@P1}\)
+
+\vspace{1em}
+\raggedright
+Energy balance for boiler, 
+
+we consider boiler to perform no work as heat is provided only,
+
+\(q_{in}\) = \(h_3 - h_2\)  
+
+\vspace{1em}
+
+Energy balance for Turbine(q = 0),
+
+\(w_{turbine,out}\)  =  \(h_4 - h_3\) 
+
+\vspace{1em}
+
+Energy balance for Condenser(w = 0),
+
+\(q_{out}\) = \(h_4 - h_1\)
+
+\vspace{1em}
+
+for writing the expression of efficiency,
+\raggedright
+\vspace{1em}
+
+\(\eta_{\text{th}} = \frac{w_{\text{net,out}}}{q_{\text{in}}}\)
+
+\(\eta_{\text{th}} = 1 - \frac{h_4 - h_1}{h_3 - h_2}\)
+
+
+\textbf{
+\section{{Brayton Cycle}}
+}
+
+Brayton cycle is a fundamental ideal gas power cycle. These gas turbines usually work in open cycles. Fresh air at ambient conditions is drawn into the compressor, where its temperature and pressure are raised. The high-pressure air proceeds into the combustion chamber, where the fuel is burned at constant pressure. The resulting high-temperature gases then enter the turbine, where they expand to the atmospheric pressure while producing power. The exhaust gases leaving the turbine are thrown out (not recirculated), causing the cycle to be classified as an open cycle. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Brayton.png}
+    \caption{flow chart for a simple ideal Brayton Cycle}
+    \label{fig:placeholder}
+\end{figure}
+
+The ideal Brayton cycle undergoes four reversible processes that are: 
+
+\textbf{1-2} Isentropic compression (in a compressor)
+
+\textbf{2-3} Constant-pressure heat addition 
+
+\textbf{3-4} Isentropic expansion (in a turbine) 
+
+\textbf{4-1} Constant-pressure heat rejection 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Brayton_Ts.png}
+    \caption{Ts diagram of a simple ideal Brayton Cycle}
+    \label{fig:placeholder}
+\end{figure}
+
+The T-s diagram of an ideal Brayton cycle are shown in Fig. 3 Notice that all four processes of the Brayton cycle are executed in steady-flow devices; thus, they should be analyzed as steady-flow processes. When the changes in kinetic and potential energies are neglected, the energy balance for a steady-flow process can be expressed, on a unit-mass basis, as:
+\vspace{1em}
+
+(\(q_{in}\)  -  \(q_{out}\) ) + (\(w_{in}\)  -  \(w_{out}\) ) = (\(h_{leaving}\)  -  \(h_{incoming}\) )
+
+\(q_{in}\) = \(h_{3}\) - \(h_{2}\) = \(c_{p}\)(\(T_{3}\) - \(T_{2}\)) 
+
+\(q_{out}\) = \(h_{4}\) - \(h_{1}\) = \(c_{p}\)(\(T_{4}\) - \(T_{1}\)) 
+
+Then the thermal efficiency of the ideal Brayton cycle under the cold-air standard assumptions becomes,
+
+\(\eta_{\text{th}} = \frac{w_{\text{net,out}}}{q_{\text{in}}}\)
+
+\(\eta_{\text{th}} =  1 - \frac{q_out}{q_in}\) = 1 - \(\frac{c_p(T_4 - T_1)}{c_p(T_2 - T _1)}\) 
+
+taking \( r_p = \frac{P_2}{P_1}
+\) as pressure ratio
+
+\textbf{\(
+\eta_{\text{th}} = 1 - \frac{1}{r_p^{(k-1)/k}}
+\)}
+
+
+\textbf{
+\section{{Comparison between two cycles}}
+}
+
+\begin{itemize}
+    \item Nature of fluid: The primary difference between the two cycles lies in the nature of fluid working in the cycles. Rankine cycle is vapour power cycle commonly using steam where as Brayton cycle is gas- power cycle where working fluid is typically air. 
+    \item Method of compression of working fluid: in Rankine cycle, compression occurs with the help of a pump, which requires a relatively small input work where as in Brayton, compression of fluid occurs via compressor acting on a gas, which is much more significant than pump work input. 
+    \item Temperature ranges: Rankine cycle ususally runs on a smaller maximum temperature as compared to Brayton cycle, because gas turbines operate at much higher temperature, and its efficiency is a strong function of pressure ratio. 
+\end{itemize}
+
+\textbf{
+\section{{Applications of each cycle}}
+}
+
+\begin{itemize}
+    \item Rankine cycle is most commonly used in steam power plants, where large amounts of power is generated continuously. Typical applications include coal power plants, nuclear power plants, and also solar thermal power plants. In these settings, Rankine cycle is much suited to convert high amount of thermal energy into electrical energy. 
+    \item Brayton cycle is primarily used in gas-powered cycles. It is also applied in jet aircrafts. Plus, Brayton cycle is commonly used in modern combined-cycle power plants, where the hot exhaust gases leaving the gas turbine are not wasted. This heat is used to produce steam that drives a Rankine cycle, allowing the plant to generate more power from the same fuel and significantly improving overall efficiency.  
+\end{itemize}
+
+\textbf{
+\section{{Some insights}}
+}
+From the study of these two cycles I inferred some key insights about how ideal models can be utilized to study real cycles used in power plants. The key concept was applying First law of thermodynamic at each step, where as second law was fixed once we fixed the model. Ideal cycles help us analyze what best we can do theoretically, defining the limits. 
+
+After reading the textbook, Thermodynamics An Engineering Approach by Cengels and Boles, I got to realise what are some more factors that affect the efficiency of cycles in real life. For example, the amount of steam in the step from state~3 to state~4 can really affect the condensor and pump as the quality of steam reduces it cause issues in the pump as pump is designed to increase pressure in liquid particularly. 
+
+Also, I got to know about the irrepressibilities that occur at each step in both Rankine and Brayton cycle. Fluid friction, heat loss, pressure loss, maintaining constant temperature, maintaining isentropy to certain level etc these all are major effects responsible for causing irreversibilities. 
+
+
+\vspace{1em}
+
+\vspace{1em}
+
+\vspace{1em}
+
+\vspace{1em}
+\textbf{References :}
+
+"Thermodynamics: an Engineering approach" by Yunus Cengel and Michael Boles
+\end{document}
